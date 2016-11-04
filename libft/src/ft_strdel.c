@@ -6,7 +6,7 @@
 /*   By: nrandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 18:53:32 by nrandria          #+#    #+#             */
-/*   Updated: 2015/11/25 18:58:26 by nrandria         ###   ########.fr       */
+/*   Updated: 2016/11/03 21:31:45 by nrandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_strdel(char **as)
 {
+	if (as == NULL)
+		return ;
 	free(*as);
 	*as = NULL;
 }

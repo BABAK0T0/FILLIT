@@ -6,7 +6,7 @@
 /*   By: nrandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:58:11 by nrandria          #+#    #+#             */
-/*   Updated: 2016/04/13 13:06:54 by nrandria         ###   ########.fr       */
+/*   Updated: 2016/11/04 00:04:46 by nrandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ void				alpha_mirror(int argc, char **argv);
 void				do_op(int ac, char **av);
 void				print_bits(unsigned char octet);
 int					ft_abs(int nb);
+int					get_next_line(int const fd, char **line);
 
 #endif

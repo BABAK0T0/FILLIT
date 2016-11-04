@@ -6,15 +6,15 @@
 /*   By: nrandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 14:44:40 by nrandria          #+#    #+#             */
-/*   Updated: 2015/11/30 16:38:49 by nrandria         ###   ########.fr       */
+/*   Updated: 2016/11/04 01:19:40 by nrandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
-	int i;
-	int neg;
-	int res;
+	int	i;
+	int	neg;
+	int	res;
 
 	i = 0;
 	neg = 0;

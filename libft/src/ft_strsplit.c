@@ -6,7 +6,7 @@
 /*   By: nrandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 14:48:05 by nrandria          #+#    #+#             */
-/*   Updated: 2015/12/03 15:45:17 by nrandria         ###   ########.fr       */
+/*   Updated: 2016/11/03 21:55:43 by nrandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ char		**ft_strsplit(char const *s, char c)
 	int		nb_word;
 	int		index;
 
+	if (!s || !c)
+		return (NULL);
 	index = 0;
 	nb_word = ft_cnt_parts((const char *)s, c);
 	t = (char **)malloc(sizeof(*t) * (ft_cnt_parts((const char *)s, c) + 1));

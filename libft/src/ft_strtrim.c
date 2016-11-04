@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 15:38:52 by nrandria          #+#    #+#             */
-/*   Updated: 2015/11/30 20:18:24 by nrandria         ###   ########.fr       */
+/*   Created: 2016/11/03 22:13:29 by nrandria          #+#    #+#             */
+/*   Updated: 2016/11/04 01:33:10 by nrandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,24 @@ char		*ft_strtrim(char const *s)
 	int		i;
 	int		j;
 
-	if ((ptr = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)) == NULL)
+	if (!s)
 		return (NULL);
 	i = 0;
 	j = ft_strlen(s);
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+	while (s[i] && (s[i] == ' ' || s[i] == '\t' || s[i] == '\n'))
 		i++;
 	if (s[j] == '\0')
 	{
 		j--;
-		while (s[j] == ' ' || s[j] == '\t' || s[j] == '\n')
-		{
+		while (j > 0 && (s[j] == ' ' || s[j] == '\t' || s[j] == '\n'))
 			j--;
-		}
 	}
-	if (j < 0)
-		return ("");
-	ptr = ft_strsub(s, i, j - i + 1);
-	return (ptr);
+	if (j <= 0)
+	{
+		ptr = (char*)malloc(sizeof(char) * 1);
+		ptr[0] = '\0';
+		return (ptr);
+	}
+	else
+		return (ptr = ft_strsub(s, i, j - i + 1));
 }

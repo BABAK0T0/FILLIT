@@ -6,11 +6,9 @@
 #    By: nrandria <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 11:23:48 by nrandria          #+#    #+#              #
-#    Updated: 2016/04/13 13:06:18 by nrandria         ###   ########.fr        #
+#    Updated: 2016/11/04 01:12:46 by nrandria         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-.PHONY: all, fclean, clean, re
 
 NAME = libft.a
 
@@ -18,7 +16,7 @@ CC = clang
 
 FLAGS = -Wall -Wextra -Werror -ansi -pedantic
 
-HEAD = -I ./include
+HEAD = -Iincludes
 
 SRC = src/ft_atoi.c						\
 			src/ft_bzero.c					\
@@ -89,7 +87,6 @@ SRC = src/ft_atoi.c						\
 
 OBJ = $(SRC:src/%.c=%.o)
 
-
 all: $(NAME)
 
 $(NAME):
@@ -118,3 +115,5 @@ fclean:
 	@echo "\033[33m----------------------------------\033[0m"
 
 re: fclean all
+
+.PHONY: all, clean, fclean, re
