@@ -6,7 +6,7 @@
 #    By: nrandria <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 11:23:48 by nrandria          #+#    #+#              #
-#    Updated: 2016/02/02 20:17:32 by nrandria         ###   ########.fr        #
+#    Updated: 2016/11/04 01:49:10 by nrandria         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC_NAME = src/place_unplace.c 		\
 
 OBJ_PATH	=	obj/
 
-INCLUDE 	= -Iinclude -Ilibft/include
+INCLUDE 	= -Iinclude -Ilibft/includes
 
 LDFLAGS		=	-Llibft
 LDLIBS 		= -lft
